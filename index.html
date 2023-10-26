@@ -114,7 +114,32 @@
         Insert references
       </pre>
 
-  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Button Colour</title>
+  </head>
+  <body>
+    <button id="colorButton">Click me to change colour</button>
+    <script>
+      //Get a reference to the button element
+      var button = document.getElementById("colorButton");
+
+      //Function to change button colour
+      function changeColor(){
+        //Generate random colour (hexadecimal)
+        var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+        //Set buttons background colour to the randome colour
+        button.style.backgroundColor = randomColor;
+      }
+
+      //Add a click event listenerto the button
+      button.addEventListener("click", changeColor);
+        
+    </script>
+  </body>
+</html>
 
 
       
